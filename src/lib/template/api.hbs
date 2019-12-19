@@ -1,0 +1,47 @@
+/* eslint-disable */
+import axios from 'axios'
+import qs from 'qs'
+let domain = ''
+export const getDomain = () => {
+  return domain
+}
+export const setDomain = ($domain) => {
+  domain = $domain
+}
+export const request = (method, url, body, queryParameters, form, config)=>{
+  method = method.toLowerCase()
+  let keys = Object.keys(queryParameters)
+  let queryUrl = url
+  if ( keys.length > 0 ) {
+      queryUrl = url + '?' + qs.stringify(queryParameters)
+  }
+  // let queryUrl = url+(keys.length > 0 ? '?' + (keys.map(key => key + '=' + encodeURIComponent(queryParameters[key])).join('&')) : '')
+  if(body){
+      return axios[method](queryUrl,body,config)
+  } else if (method === 'get') {
+      return axios[method](queryUrl,{params: form},config)
+  } else {
+      return axios[method](queryUrl,qs.stringify(form),config)
+  }
+}
+
+// request interceptor
+axios.interceptors.request.use(config => {
+// Do something before request is sent
+    return config
+}, error => {
+// Do something with request error
+    console.log(error) // for debug
+})
+
+// respone interceptor
+axios.interceptors.response.use(
+    response => {
+        return response.data
+    },
+    error => {
+        console.log('err' + error) // for debug
+    }
+)
+
+{{> methods }}

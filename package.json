@@ -1,0 +1,30 @@
+{
+  "name": "swagger2axios",
+  "version": "1.0.0",
+  "description": "swagger.json 转成 axios 的自动api。包含拦截器及代码注释",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --color --progress "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaoqiang1112/swagger2axios.git"
+  },
+  "keywords": [
+    "swagger",
+    "axios",
+    "swagger2axios"
+  ],
+  "author": "gaoqiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaoqiang1112/swagger2axios/issues"
+  },
+  "homepage": "https://github.com/gaoqiang1112/swagger2axios#readme",
+  "dependencies": {
+    "handlebars": "^4.5.3",
+    "js-beautify": "^1.10.2",
+    "lodash": "^4.17.15"
+  }
+}
