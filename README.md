@@ -64,4 +64,5 @@ this.$http.(autoapi下方法名)({
 ```html
 1 每次生成会覆盖之前文件代码 如果修改请保存相关修改
 2 请确保后台给的swagger.json内容相对完整
+3 此代码是参考swagger-vue 项目2次开发的 原项目地址 https://github.com/chenweiqun/swagger-vue 尊重原创 感谢
 ```
