@@ -2,12 +2,10 @@ const Handlebars = require('handlebars')
 const path = require('path')
 const beautify = require('js-beautify').js_beautify
 let apiTemplate,methods,method
-if(!!!window){
-  const fs = require('fs')
-  apiTemplate = fs.readFileSync(path.join(__dirname, './template/api.hbs'), 'utf-8')
-  methods = fs.readFileSync(path.join(__dirname, './template/methods.hbs'), 'utf-8')
-  method = fs.readFileSync(path.join(__dirname, './template/method.hbs'), 'utf-8')
-}
+const fs = require('fs')
+const apiTemplate = fs.readFileSync(path.join(__dirname, './template/api.hbs'), 'utf-8')
+const  methods = fs.readFileSync(path.join(__dirname, './template/methods.hbs'), 'utf-8')
+const  method = fs.readFileSync(path.join(__dirname, './template/method.hbs'), 'utf-8')
 
 Handlebars.registerPartial('methods', methods)
 Handlebars.registerPartial('method', method)

@@ -18,7 +18,7 @@ npm install swagger2axios -D
 第一、 package.json 配置启动命令
 # 例如
 "scripts": {
-    "getapi": "node autoApi DOWNLOAD_URL=http://**.**.**.**:****/**/**** OUTPUT=src/utils/autoapi.js"
+    "getapi": "node node_modules/swagger2axios/src/index.js DOWNLOAD_URL=http://**.**.**.**:****/**/**** OUTPUT=src/utils/autoapi.js"
 }
 # DOWNLOAD_URL 为 swagger的json  路径  
 #       网络地址则如: https://www.swagger.com/swagger.json

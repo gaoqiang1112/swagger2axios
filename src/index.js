@@ -28,10 +28,8 @@ async function initAutoApi(){
     className: 'api'
   }
   const codeResult = swaggerGen(opt)
-  if(!!!window){
-    const fs = require('fs')
-    fs.writeFileSync(`${process.cwd()}/${OUTPUT}`, codeResult)
-  }
+  const fs = require('fs')
+  fs.writeFileSync(`${process.cwd()}/${OUTPUT}`, codeResult)
 }
 
 initAutoApi()
