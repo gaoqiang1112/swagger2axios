@@ -26,7 +26,8 @@ npm install swagger2axios -D
 # OUTPUT       为 autoapi 输出文件路径  如: src/utils/autoapi.js
 # 如不加 则默认读取 根目录下名为swagger.json的文件   默认输出目录为项目根目录
 
-
+```
+```html
 第二、 vue 主启动js内添加 请求前缀
 # 例如
 (1) main.js 下
@@ -49,11 +50,10 @@ A:     myHttp.setDomain('http://**.**.**.**:****')
 # 将 http 请求绑定到vue对象上
 Vue.prototype.$http = myHttp
 
-
+```
+```html
 第三、 vue文件使用
-# 例如 此处 【autoapi下方法名】就是你点击swagger具体请求路径，url最后那段请求名
-![Image text](https://raw.githubusercontent.com/gaoqiang1112/swagger2axios/master/src/lib/img/ex1.png)
-
+# 例如 
 this.$http.(autoapi下方法名)({
     '***': '***',
     '***': '***'
@@ -62,6 +62,13 @@ this.$http.(autoapi下方法名)({
 })
 
 ```
+> 例
+
+
+
+![Image text](https://raw.githubusercontent.com/gaoqiang1112/swagger2axios/master/src/lib/img/ex1.png)
+
+
 > 注
 ```html
 1 每次生成会覆盖之前文件代码 如果修改请保存相关修改
