@@ -53,7 +53,7 @@ Vue.prototype.$http = myHttp
 ```
 ```html
 第三、 vue文件使用
-# 例如 
+# 例如 【autoapi下方法名】就是swawgger里具体点击具体请求后 url最后面的变量名(如下图 图1)
 this.$http.(autoapi下方法名)({
     '***': '***',
     '***': '***'
@@ -62,12 +62,9 @@ this.$http.(autoapi下方法名)({
 })
 
 ```
-> 例
-
-
+> 图1
 
 ![Image text](https://raw.githubusercontent.com/gaoqiang1112/swagger2axios/master/src/lib/img/ex1.png)
-
 
 > 注
 ```html
