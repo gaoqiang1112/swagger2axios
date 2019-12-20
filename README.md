@@ -53,14 +53,17 @@ Vue.prototype.$http = myHttp
 ```
 ```html
 第三、 vue文件使用
-# 例如 【autoapi下方法名】就是swawgger里具体点击具体请求后 url最后面的变量名(如下图 图1)
-this.$http.(autoapi下方法名)({
+# 例如 
+this.$http.getVersionUsingGET({
     '***': '***',
     '***': '***'
 }).then(function (response) {
     console.log(response.data) //
 })
 
+# 【getVersionUsingGET】
+可是 生成的autoapi内具体的方法名
+也可是swawgger里具体点击具体请求后 url最后面的变量名(如下图 图1)
 ```
 > 图1
 
