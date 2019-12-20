@@ -1,6 +1,6 @@
 {
   "name": "swagger2axios",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "swagger.json 转成 axios 的自动api。包含拦截器及代码注释",
   "main": "index.js",
   "scripts": {
