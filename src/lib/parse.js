@@ -203,7 +203,7 @@ let getViewForSwagger1 = function (opts) {
 }
 
 let parse = function (opts) {
-  let data = opts.swagger.swagger === '2.0' ? getViewForSwagger2(opts) : getViewForSwagger1(opts)
+  let data = opts.swagger.swagger === '1.0' ? getViewForSwagger1(opts) : getViewForSwagger2(opts)
   return data
 }
 
